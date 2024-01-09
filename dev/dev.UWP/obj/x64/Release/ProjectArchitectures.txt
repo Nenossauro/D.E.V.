@@ -1,0 +1,1 @@
+C:\Users\Pichau\Desktop\DEV\aplicativo\dev\dev\dev.UWP\dev.UWP.csproj;x64

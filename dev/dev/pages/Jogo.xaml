@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:dev.pages"
+             x:Class="dev.pages.Jogo"
+              
+            >
+    <pages:tabuleiro></pages:tabuleiro>
+    <pages:dice></pages:dice>
+    <!--Cartas--><ContentPage>
+        <Grid BackgroundColor="#1e1e1e">
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="180"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="45"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="8"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="8"/>
+            </Grid.ColumnDefinitions>
+
+            <Label HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="2" Text="Eventos" Style="{DynamicResource TitleStyle}" TextColor="Gray" />
+
+
+
+            <Button Text="Puxar uma carta" FontSize="Medium" BackgroundColor="PaleGoldenrod" HorizontalOptions="Center" VerticalOptions="Center"
+            BorderRadius="10" Clicked="puxar" Grid.Row="1" Grid.Column="2" TextColor="Black"/>
+
+            <Button Text="Cartas puxadas" FontSize="Medium" BackgroundColor="PaleGoldenrod" HorizontalOptions="Center" VerticalOptions="Center"
+            BorderRadius="10" Clicked="crtpxd" Grid.Row="2" Grid.Column="2" TextColor="Black"/>
+
+            <Button Text="Seus Efeitos" FontSize="Medium" BackgroundColor="PaleGoldenrod" HorizontalOptions="Center" VerticalOptions="Center"
+            BorderRadius="10" Clicked="events" Grid.Row="3" Grid.Column="2" TextColor="Black"/>
+
+
+        </Grid>
+    </ContentPage>
+    <!--Carteira--><ContentPage>
+        <Grid BackgroundColor="#D9502E">
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="180"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="95"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="1"/>
+            </Grid.ColumnDefinitions>
+
+            <Label HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="2" Text="Sua carteira!" Style="{DynamicResource TitleStyle}" TextColor="White" />
+
+
+
+            <Label x:Name="money" HorizontalOptions="Center" Grid.Row="1" Grid.Column="2" Text="Seu dinheiro: 0$" Style="{DynamicResource SubtitleStyle}" TextColor="White"/>
+            <Button Text="Adicionar" FontSize="Medium" BackgroundColor="PaleGoldenrod" HorizontalOptions="Center" VerticalOptions="Center"
+            BorderRadius="10" Clicked="add" Grid.Row="2" Grid.Column="2" TextColor="Black"/>
+
+            <Button Text="Roubado" FontSize="Medium" BackgroundColor="PaleGoldenrod" 
+                    HorizontalOptions="Center" VerticalOptions="Center"
+                    BorderRadius="10" Clicked="roubs" 
+                    Grid.Row="4" Grid.Column="2" TextColor="Black"/>
+            <Entry x:Name="pmoney" FontSize="15" Keyboard="Numeric" WidthRequest="200"  HorizontalOptions="Center" Grid.Row="3" Grid.Column="2" Placeholder="Valor..."  TextColor="Black" ></Entry>
+
+
+            <Button Text="Add +10" FontSize="Medium" BackgroundColor="PaleGoldenrod" HorizontalOptions="Center" VerticalOptions="Center"
+            BorderRadius="10" Clicked="addd" Grid.Row="5" Grid.Column="2" TextColor="Black"/>
+
+
+        </Grid>
+
+
+
+
+    </ContentPage>
+    <!--Loja-->
+    <ContentPage>
+
+        <Grid BackgroundColor="#D9502E">
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="180"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="0"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="1"/>
+            </Grid.ColumnDefinitions>
+
+            <Label HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="2" Text="Loja!" Style="{DynamicResource TitleStyle}" TextColor="White" />
+
+            <Picker x:Name="vendinha" SelectedIndexChanged="info" Grid.Row="3" Grid.Column="3" Title="Loja" FontSize="15" TitleColor="White"/>
+
+            <Label x:Name="moneyv" HorizontalOptions="Center" Grid.Row="1" Grid.Column="2" Text="Seu dinheiro:  0$" Style="{DynamicResource SubtitleStyle}" TextColor="White"/>
+            <Button Text="Comprar" FontSize="Medium" BackgroundColor="PaleGoldenrod" HorizontalOptions="Center" VerticalOptions="Center"
+            BorderRadius="10" Clicked="comprar" Grid.Row="3" Grid.Column="2" TextColor="Black"/>
+            <Button Text="Usar" FontSize="Medium" BackgroundColor="PaleGoldenrod" HorizontalOptions="Center" VerticalOptions="Center"
+            BorderRadius="10" Clicked="usar" Grid.Row="5" Grid.Column="2" TextColor="Black"/>
+
+            <Picker x:Name="inventario" Grid.Row="5" Grid.Column="3" Title="Itens" FontSize="15" TitleColor="White"/>
+
+
+
+
+
+        </Grid>
+
+
+
+
+    </ContentPage>
+</CarouselPage>

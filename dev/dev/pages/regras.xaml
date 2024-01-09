@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dev.pages.regras"
+
+             >
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#1e1e1e">
+            
+
+            <Label HorizontalTextAlignment="Center"  Text="Desistir é vencer. D.E.V." Style="{DynamicResource TitleStyle}" TextColor="Gray" />
+
+            <Label HorizontalTextAlignment="Center"  Text="Regras:" TextColor="Gray" Style="{DynamicResource SubtitleStyle}" />
+
+
+            <Label HorizontalTextAlignment="Center"  Text="1. D.E.V. deve ser levado totalmente a sério quando se esta jogando.
+                                                                                           2. D.E.V. não irá tolerar distrações, como uso de celular, durante o decorrer do jogo. 
+                                                                                            3. D.E.V. é um jogo aonde o unico objetivo é o fim, não importa o preço.
+                                                                                        4. D.E.V. não terá pena de você." TextColor="Gray" Style="{DynamicResource CaptionStyle}" />
+        
+            <Label HorizontalTextAlignment="Center"  Text="Mecanicas:" Style="{DynamicResource SubtitleStyle}" TextColor="Gray"/>
+            <Label HorizontalTextAlignment="Center"  Text=" 1. Role um dado, o numero que cair será o numero de quadrantes que você andara
+                                                                    2. Cada quadrante tem uma cor que representa uma consequencia.
+                                                                                    3. Sempre que você voltar do inicio receba 10$. 
+                                                                                                                    4. Morte limpa todos os seus efeitos mas te joga no começo.
+                                                                                                                             5. Chegue até o fim para se libertar." TextColor="Gray" Style="{DynamicResource CaptionStyle}" />
+            <Label HorizontalTextAlignment="Center" Text="Legenda:" Style="{DynamicResource SubtitleStyle}" TextColor="Gray"/>
+            <Label HorizontalTextAlignment="Center"  Text="Branco: Puxe uma carta | Preto: Volte do começo
+                                                                                                         Vermelho: Volte cinco quadrante | Azul: Quiz Maluco
+                                                                                                                Cifrão: Abrir loja |  ?: ???" TextColor="Gray" Style="{DynamicResource CaptionStyle}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+

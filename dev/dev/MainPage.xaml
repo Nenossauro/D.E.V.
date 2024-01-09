@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:dev.pages"
+             x:Class="dev.MainPage"
+              
+            >
+    <Grid BackgroundColor="#D9502E" >
+        <Image Aspect="Fill" Source="capaprovisoria.jpg"
+               Grid.Column="0" Grid.Row="0"
+               Grid.ColumnSpan="5" Grid.RowSpan="7"/>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="180"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            
+
+
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Label  Text="D.E.V" Grid.Row="1" Grid.Column="2" FontSize="42" HorizontalTextAlignment="Center"  TextDecorations="Underline" TextColor="Black"/>
+        <Label  HeightRequest="30" Text="Desistir É Vencer" Grid.Row="2" Grid.Column="2" TextDecorations="Underline" FontSize="24" HorizontalTextAlignment="Center" TextColor="Black" FontAttributes="Italic"/>
+
+        <Button Text="Jogar" FontSize="Medium" BackgroundColor="Brown" HorizontalOptions="Center" VerticalOptions="Center"
+            BorderRadius="10" Clicked="jogar" WidthRequest="200" Grid.Row="3" Grid.Column="2" TextColor="White"/>
+        <Button Text="Regras" FontSize="Medium" BackgroundColor="Brown" HorizontalOptions="Center" VerticalOptions="Center"
+            BorderRadius="10" Clicked="regras" WidthRequest="200" Grid.Row="4" Grid.Column="2" TextColor="White"/>
+        <Button Text="Sobre" FontSize="Medium" BackgroundColor="Brown" HorizontalOptions="Center" VerticalOptions="Center"
+            BorderRadius="10" WidthRequest="200" Grid.Row="5" Grid.Column="2" TextColor="White"/>
+
+    </Grid>
+</ContentPage>
